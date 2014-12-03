@@ -5,9 +5,17 @@
 * ODDLY
 
 ** TODO Finir les endpoints de teapot
-*** TODO Endpoint /users /user/list /user/add /user/set /user/del
-*** TODO Endpoint /artists /artist/list /artist/add /artist/set /artist/del
-*** TODO Endpoint /categories /category/list /category/add /category/set /category/del
-*** TODO Endpoint /items /item/list /item/add /item/set /item/del
 
+*** DONE Endpoint /users /user/:id /user/add /user/set /user/del
+**** DONE /users/ 
+**** DONE /user/:id 
+**** DONE /user/add/
+**** DONE /user/set/ 
+**** DONE /user/del/ 
+
+*** TODO Endpoint /artists /artist/:id /artist/add /artist/set /artist/del
+
+*** TODO Endpoint /categories /category/:id /category/add /category/set /category/del
+
+*** TODO Endpoint /items /item/:id /item/add /item/set /item/del
 

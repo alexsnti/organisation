@@ -13,7 +13,7 @@
 **** TODO Recommencer l'implantation des utilisateurs dans sonata ?
 *** TODO Permettre d'ajouter / editer / supprimer des utilisateurs
 
-
+    
 ** DONE Valeur par défaut pour les select oneToMany
    - *Solution*:
    - ->add('produit_conseil','sonata_type_model',array('empty_value'=>"Aucun",'required'=>false)) 
