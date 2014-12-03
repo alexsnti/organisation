@@ -1,0 +1,13 @@
+#+TITLE: I should organize myself ODDLY EDITION 
+#+AUTHOR: Alex
+#+DATE: <2014-12-03 mer.>
+
+* ODDLY
+
+** TODO Finir les endpoints de teapot
+*** TODO Endpoint /users /user/list /user/add /user/set /user/del
+*** TODO Endpoint /artists /artist/list /artist/add /artist/set /artist/del
+*** TODO Endpoint /categories /category/list /category/add /category/set /category/del
+*** TODO Endpoint /items /item/list /item/add /item/set /item/del
+
+
