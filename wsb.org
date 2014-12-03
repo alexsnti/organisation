@@ -1,0 +1,11 @@
+#+TITLE: I should organize myself WSB EDITION 
+#+AUTHOR: Alex
+#+DATE: <2014-12-03 mer.>
+
+* Phyto
+
+** TODO Finir l'envoi de mail[0/2] 
+*** TODO Rendre les mails paramètrable
+*** TODO Créer un template pour le mail envoyé
+
+** TODO Valeur par défaut pour les select oneToMany
