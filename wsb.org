@@ -8,4 +8,13 @@
 *** TODO Rendre les mails paramètrable
 *** TODO Créer un template pour le mail envoyé
 
-** TODO Valeur par défaut pour les select oneToMany
+** TODO Debug des users admin[0/2]
+*** TODO Résoudre l'erreur 500
+*** TODO Permettre d'ajouter / editer / supprimer des utilisateurs
+
+** DONE Valeur par défaut pour les select oneToMany
+   - *Solution*:
+   - ->add('produit_conseil','sonata_type_model',array('empty_value'=>"Aucun",'required'=>false)) 
+   
+   
+  
