@@ -1,5 +1,4 @@
 #+STARTUP: showeverything
-#+STARTUP: indent
 #+STARTUP: hidestars
 
 #+TITLE: I should organize myself WSB EDITION 
@@ -17,7 +16,44 @@
 *** TODO Résoudre l'erreur 500
 **** TODO Recommencer l'implantation des utilisateurs dans sonata ?
 *** TODO Permettre d'ajouter / editer / supprimer des utilisateurs
+
+
+    Situation au <2014-12-08 lun.>:
+    admin/user/list renvoi un code erreur 500
     
+     #+begin_src php
+     ContextErrorException: Notice: 
+     Undefined index: groups in 
+     /var/www/phyto/www/vendor/sonata-project/doctrine-orm-admin-bundle/Guesser/FilterTypeGuesser.php 
+     line 63
+     #+end_src
+    
+A noter que j'avais eu ce problème dans les fichiers Phyto\MainBundle\Admin\x.php car il
+cherchait une colonne qui n'existait pas soit dans le model soit dans la base.
+
+
+** DONE Configuration du Wysiwyg
+   Configuration directement dans le /config.yml/ du projet, ensemble des champs
+   des toolbars à l'adresse suivante: 
+   [[http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Toolbar
+]]
+** TODO Modification de la navigation sur la home
+   -----------------------------------------------------------------------------
+   *Gestion du menu sur la home*
+
+   Le menu est géré en fonction du poid attribué à l'entrée en BO, 
+   cela contrait d'avoir un ordre précis en backoffice si on décide 
+   de ne pas afficher /toutes/ les entrées
+
+   *Exemple:* 
+   _Je ne veux afficher que l'entrée avec le poid 1_
+   *menucms(1,1)*
+   _Je veux afficher seulement l'entrée qui a comme poid 5 et 6_
+   *menucms(3,7)*
+
+   Some weird shit is going on, here...
+   -----------------------------------------------------------------------------
+
 ** DONE Valeur par défaut pour les select oneToMany
    *Solution*:
 
@@ -34,3 +70,4 @@
 
    
   
+
