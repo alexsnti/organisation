@@ -37,13 +37,13 @@ cherchait une colonne qui n'existait pas soit dans le model soit dans la base.
    des toolbars à l'adresse suivante: 
    [[http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Toolbar
 ]]
-** TODO Modification de la navigation sur la home
+** DONE Modification de la navigation sur la home
    -----------------------------------------------------------------------------
    *Gestion du menu sur la home*
 
    Le menu est géré en fonction du poid attribué à l'entrée en BO, 
-   cela contrait d'avoir un ordre précis en backoffice si on décide 
-   de ne pas afficher /toutes/ les entrées
+   cela contraint d'avoir un ordre précis en backoffice si on décide 
+   de ne pas afficher toutes les entrées
 
    *Exemple:* 
    _Je ne veux afficher que l'entrée avec le poid 1_
