@@ -1,3 +1,7 @@
+#+STARTUP: showeverything
+#+STARTUP: indent
+#+STARTUP: hidestars
+
 #+TITLE: I should write some shit down MYSELF EDITION 
 #+AUTHOR: Alex
 #+DATE: <2014-12-07 dim.>
@@ -9,13 +13,13 @@
 /Import circulaires dans django/
 _2014-12-07 dim.[00:05]_
 
-Issue:
+/Issue/:
 X.models dépend de Y.models dans un foreignKey() mais Y.models à aussi besoin de 
 X.models ... Donc Y import X et X import Y.
 
-Solution:
-Au lieu de passer dans le foreignKey le model import dans X.models import Z, il 
-faut passer l'app + le model en string.
+/Solution:/
+Au lieu de passer dans le models.ForeignKey() le model importé dans /X.models 
+import Z/, il faut passer l'app + le model comme string.
 
 *models.ForeignKey(Z) deviens models.ForeignKey("X.Z")*
 

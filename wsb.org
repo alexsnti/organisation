@@ -1,3 +1,7 @@
+#+STARTUP: showeverything
+#+STARTUP: indent
+#+STARTUP: hidestars
+
 #+TITLE: I should organize myself WSB EDITION 
 #+AUTHOR: Alex
 #+DATE: <2014-12-03 mer.>
@@ -8,15 +12,25 @@
 *** TODO Rendre les mails paramètrable
 *** TODO Créer un template pour le mail envoyé
 
-** TODO Debug des users admin[1/2]
-*** DONE Résoudre l'erreur 500
+    
+** TODO Debug des users admin[0/2]
+*** TODO Résoudre l'erreur 500
 **** TODO Recommencer l'implantation des utilisateurs dans sonata ?
 *** TODO Permettre d'ajouter / editer / supprimer des utilisateurs
-
     
 ** DONE Valeur par défaut pour les select oneToMany
-   - *Solution*:
-   - ->add('produit_conseil','sonata_type_model',array('empty_value'=>"Aucun",'required'=>false)) 
-   
+   *Solution*:
+
+   #+begin_src php
+   ->add(
+         'produit_conseil',
+         'sonata_type_model',
+         array(
+               'empty_value'=>"Aucun",
+               'required'=>false
+               )
+         ) 
+   #+end_src
+
    
   

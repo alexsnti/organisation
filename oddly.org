@@ -1,3 +1,7 @@
+#+STARTUP: showeverything
+#+STARTUP: indent
+#+STARTUP: hidestars
+
 #+TITLE: I should organize myself ODDLY EDITION 
 #+AUTHOR: Alex
 #+DATE: <2014-12-03 mer.>
@@ -5,19 +9,23 @@
 * ODDLY
 
 ** TODO Finir les endpoints de teapot
-  
+--------------------------------------------------------------------------------  
 *** DONE Endpoint /users /user/:id /user/add /user/set /user/del
-<2014-12-04 jeu.>
+    <2014-12-04 jeu.>
 **** DONE /users/ 
 **** DONE /user/:id 
 **** DONE /user/add/
 **** DONE /user/set/ 
-**** DONE /user/del/ 
-     
+**** DONE /user/del/     
+--------------------------------------------------------------------------------  
+
 *** TODO Endpoint /artists /artist/:id /artist/add /artist/set /artist/del
+--------------------------------------------------------------------------------  
 
 *** TODO Endpoint /categories /category/:id /category/add /category/set /category/del
+--------------------------------------------------------------------------------  
 
 *** TODO Endpoint /items /item/:id /item/add /item/set /item/del
+--------------------------------------------------------------------------------  
 
 
