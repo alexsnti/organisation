@@ -1,24 +1,24 @@
 #+STARTUP: showeverything
 #+STARTUP: hidestars
+#+STARTUP: indent
 
 #+TITLE: I should organize myself WSB EDITION 
 #+AUTHOR: Alex
 #+DATE: <2014-12-03 mer.>
 
-* Phyto
+* *Phyto*
 
-** TODO Finir l'envoi de mail[0/2] 
-*** TODO Rendre les mails paramètrable
-*** TODO Créer un template pour le mail envoyé
+** DONE Finir l'envoi de mail[2/2] 
+*** DONE Rendre les mails paramètrable
+*** DONE Créer un template pour le mail envoyé
+** DONE [NOTES] Debug des users admin[2/2]
+*** DONE Résoudre l'erreur 500
+**** Recommencer l'implantation des utilisateurs dans sonata ?
+     Pas utile, voir non plus bas
+*** DONE Permettre d'ajouter / editer / supprimer des utilisateurs
 
-    
-** TODO Debug des users admin[0/2]
-*** TODO Résoudre l'erreur 500
-**** TODO Recommencer l'implantation des utilisateurs dans sonata ?
-*** TODO Permettre d'ajouter / editer / supprimer des utilisateurs
 
-
-    Situation au <2014-12-08 lun.>:
+    <2014-12-08 lun.>:
     admin/user/list renvoi un code erreur 500
     
      #+begin_src php
@@ -28,16 +28,52 @@
      line 63
      #+end_src
     
-A noter que j'avais eu ce problème dans les fichiers Phyto\MainBundle\Admin\x.php car il
-cherchait une colonne qui n'existait pas soit dans le model soit dans la base.
+    A noter que j'avais eu ce problème dans les fichiers Phyto\MainBundle\Admin\x.php car il
+    cherchait une colonne qui n'existait pas soit dans le model soit dans la base.
 
+    <2014-12-09 mar.>
+    Visiblement, enlever le constructeur des classes Phyto\xx\User et Phyto\xx\Group 
+    permet de créer de nouveaux groupes, et mettre le constructeur de groupe
+    pète une erreur
 
-** DONE Configuration du Wysiwyg
+    Enlever 'PhytoUserBundle' comme argument de SonataUserBundle change pas grand chose, shit are
+    getting even weirder
+    
+    J'ai trouvé une ressource pour mettre en place les users sur Sonata, 
+    http://rajeshmeniya.blogspot.fr/2013/01/symfony21-setup-sonata-admin-bundle.html
+
+    1. Ajouter la dépendance SonataExtend dans composer & dans AppKernel ( le reste on s'en tape )
+
+       /composer.json/
+       #+begin_src json
+       "sonata-project/easy-extends-bundle": "~2.0",
+       #+end_src
+
+       /AppKernel.php/
+       #+begin_src php
+       new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+       #+end_src 
+
+    2. modifier le fos_user: user_class dans config.yml et mettre Application\Sonata\UserBundle\Entity\User
+
+    3. Ajouter les routing ( voir le site, c'est long )
+
+    - Ajouter la propriété dashboard ( step 12 )
+
+    /La security, on s'en tape ( dans ce cas précis, on l'a déja fais auparavant )/
+
+    4. generate:entities / schema:update
+
+    5. Recréer un superadmin php app/console fos:user:create --super-admin
+  
+** DONE [NOTES] Configuration du Wysiwyg
+   -----------------------------------------------------------------------------
    Configuration directement dans le /config.yml/ du projet, ensemble des champs
    des toolbars à l'adresse suivante: 
    [[http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Toolbar
-]]
-** DONE Modification de la navigation sur la home
+]]   -----------------------------------------------------------------------------
+
+** DONE [NOTES] Modificationg de la navigation sur la home
    -----------------------------------------------------------------------------
    *Gestion du menu sur la home*
 
@@ -54,7 +90,7 @@ cherchait une colonne qui n'existait pas soit dans le model soit dans la base.
    Some weird shit is going on, here...
    -----------------------------------------------------------------------------
 
-** DONE Valeur par défaut pour les select oneToMany
+** DONE [NOTES] Valeur par défaut pour les select oneToMany
    *Solution*:
 
    #+begin_src php
@@ -71,3 +107,6 @@ cherchait une colonne qui n'existait pas soit dans le model soit dans la base.
    
   
 
+
+
+* *Daucy*
