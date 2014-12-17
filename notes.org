@@ -10,7 +10,7 @@
 
 --------------------------------------------------------------------------------
 
-/Import circulaires dans django/
+/Import circulaires dans Django/
 _2014-12-07 dim.[00:05]_
 
 /Issue/:
@@ -24,4 +24,30 @@ import Z/, il faut passer l'app + le model comme string.
 *models.ForeignKey(Z) deviens models.ForeignKey("X.Z")*
 
 --------------------------------------------------------------------------------
+
+/MonkeyPatch & Patch restless/
+_2014-12-17 mer.[15:00]_ 
+
+/Issue:/
+Au renvoi d'une erreur dans restless, la classe HTTP django de base est utilisée 
+de manière brute. Son défaut n'est modifié que pour changer le status_code lié 
+à l'exception levée. De fait, la reason_phrase reste celle par défaut et est donc 
+"OK", peu import le status.
+
+/Solution Monkeypatch/
+Pour résoudre ce problème (faire en sorte que les reason_phrase soit cohérente
+avec le status levé), il faut overrider la class DjangoResource (qui étend Resource)
+en important django.http.response REASON_PHRASES et en redéfinissant la function 
+build_response en ajoutant *reason_phrase = REASON_PHRASES.get(status)*.
+
+/Solution Patch/
+Pas d'override ici, mais proposer un patch qui ajoute une ligne et un import me parait 
+un peu weak. Il faudrait ajouter la possibilité de préciser la reason_phrase attendue
+en plus du message dans le constructeur de l'erreur. Le soucis est que restless 
+fonctionne aussi bien pour django que pour Pyramid et un autre framework. 
+De ce fait, il faut essayer de modifier au minimum le code afin de garder sa 
+simplicité et sa compatibilité. Le principal ennui est que Toastdriven recupère 
+ses status_code dans le fichier exceptions.py (il me semble) et qu'ils sont 
+contenus dans des constantes et pas dans un dictionnaire, ce qui empêche 
+de recupèrer la reason_phrase associée.
 
