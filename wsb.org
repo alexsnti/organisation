@@ -6,7 +6,7 @@
 #+AUTHOR: Alex
 #+DATE: <2014-12-03 mer.>
 
-* *Phyto*
+* ARCHIVED *Phyto*
 
 ** DONE Finir l'envoi de mail[2/2] 
 *** DONE Rendre les mails paramètrable
@@ -108,5 +108,225 @@
   
 
 
+* DOING *CMMA*
 
-* *Daucy*
+** BLOCKED PARRAINAGE 
+
+
+Prévoir texte administrable en intro de page. 
+
+wording Champ : 
+mon nom / mon prénom / mon e-mail / mon identifiant sociétaire /  Je souhaite parrainer :  eMail 1 etc… 
+
+ A coté du champ " Mon identifiant sociétaire " un lien " Où le trouver " , au clic sur ce lien, la shadoxw box s'ouvre. 
+
+Les champs " je souhaite parrainer " permettent la saisie de 5 adresses e-mail. 
+
+Puis bouton de validation. 
+
+
+
+> - Shadow box N° adhérent « Où le trouver ? » 
+>   Voici le texte : 
+>   Votre numéro d’adhérent apparaît en haut à gauche de chaque courrier de correspondance CMMA Assurance
+>   que vous recevez de votre mutuelle. 
+>   Si vous n’êtes pas encore en possession de ce numéro il suffit de contacter votre conseiller en rappelant vos 
+>   Nom, Prénom, Date de naissance et Adresse postale.
+>
+>
+----------------------------------
+
+** BLOCKED Header " j'entre en contact " 
+
+Le clic sur "J'entre en contact" doit permettre le déploiement du header et l'affichage de toutes les options de contact.
+
+http://cmma.preview-wsb.com/
+
+https://www.pivotaltracker.com/story/show/82724940
+
+
+----------------
+
+** BLOCKED Image de Home : 
+
+
+il y aura 20 visuels à l'année.
+A chaque rechargement de la HP, on affiche un nouveau visuel et ce de manière aléatoire.
+
+CMMA doit nous livrer une sélection de 20 visuels HD .
+
+
+https://www.pivotaltracker.com/story/show/82725184
+
+
+---------------------------
+
+** BLOCKED Bandeau page produit : 
+
+
+Le bandeau sera administrable de la manière suivante :
+Upload d'images bandeau validées au préalable par WSB
+Mise a disposition d'une biblio en BO
+L'admin du site, selectionne le bandeau qu'il souhaite afficher sur la page.
+
+http://cmma.preview-wsb.com/offre/particuliers/auto/
+
+https://www.pivotaltracker.com/story/show/82730076
+
+
+--------------------------------- 
+
+** BLOCKED Créer un type de page "view" 
+
+Actuellement les formulaires (contact, callback, parrainage) sont gérés "en dur" hors du CMS. 
+Du coup on n'a pas les champs SEO, pas de contenu administrable avant les forms etc. 
+On pourrait créer un type de page CMS "view" (ou "form" ou whatever) qui encapsule ça 
+pour ajouter les fonctionnalités du CMS sur ces pages
+
+https://www.pivotaltracker.com/story/show/81574402
+
+----------------------------------
+
+** BLOCKED Texte page parrainage 
+
+Ajouter un champ "texte libre" en BO pour permettre à l'admin du site d'ajouter un texte d'introduction à la page.
+
+http://cmma.preview-wsb.com/parrainage/
+
+
+-----------------------------
+
+** BLOCKED Store locator : autre message : 
+
+activer la fonctionnalités " autre message" pour message temporaire avec CSS différente ( message rouge par exemple ) 
+
+https://www.pivotaltracker.com/story/show/82732012
+
+
+----------------------------------------
+
+
+
+
+** DONE contact form 
+
+
+Noms des champs à modifier : Mon nom Mon prémon Mon eMail Mon agence
+
+objet obligatoire avec une liste déroulante : 4 objets + 1 objet autre . CMMA doit nous fournir les items de la liste déroulante.
+
+http://cmma.preview-wsb.com/contact/
+
+https://www.pivotaltracker.com/story/show/82731566
+
+
+
+>
+>   Les voici : 
+>   Je voudrais m’informer sur un contrat d'assurance 
+>   Je souhaite obtenir un devis
+>   Je sollicite rendez-vous avec un conseiller
+>   J’ai un sinistre
+>   Je veux prendre des renseignements sur les partenariats CMMA Assurance
+>   J’ai une question ou une remarque
+
+
+------------------------------------
+
+** DONE CALL bACK 
+
+
+http://cmma.preview-wsb.com/rappel/
+
+Rappel immédiat devient " Le plus rapidement possible "
+
+Wording des champs à modifier :
+Mon nom / Mon prénom / Mon téléphone / Mon agence etc.
+
+Attention les horaires sont faux : CMMA revalide les plages horaires : 4 plages horaires max.
+
+
+
+> - Horaires web call back
+>   Les voici : 
+>   . de 8H30 à 12H
+>   . entre 12H et 14H
+>   . de 14H à 18H
+>   . après 18H
+
+
+https://www.pivotaltracker.com/story/show/82731964
+
+
+--------------------------------------
+
+** DONE BO | Exports des demandes de contacts
+
+Le back Office doit permettre un export des demandes de contacts ( Web call back + Contact form ) : export au format CSV, un export de toutes les demandes, ou un export de la vue filtrée. 
+
+https://www.pivotaltracker.com/story/show/82724534
+
+--------------------
+
+** DONE Page produit image sur mobile : pley
+
+
+Dans le texte de transcription de l'image, voir pour ajouter un lien qui déclenchera l'ouverture de l'image sur mobile.
+
+http://cmma.preview-wsb.com/offre/particuliers/auto/
+
+https://www.pivotaltracker.com/story/show/82730206
+
+
+----------------------------------------
+
+** DONE Mega Menu Agri Viti | Modification 
+
+Remonter les produits, on ne distingue plus agri et viti.  Les produits proposés sont : Mutipéril / Assurance grêle / Assurance Multi risque / Assurance véhicule . 
+
+https://www.pivotaltracker.com/story/show/82725092
+
+
+-------------------
+
+** DONE Traité / Non traité : 
+
+Client souhaite avoir la possibilité de renseigner un statut sur les demandes de contact par e-mail :
+Traité / Non traité
+
+https://www.pivotaltracker.com/story/show/82724074
+
+
+-------------------------- 
+
+
+
+
+
+* DOING *Daucy*
+** TODO Refacto gestion affichage des vidéos
+** DONE Création des 2 blocs vidéos supplémentaires 
+Dans la mosaique avec intégration des 2 liens vidéos + MAJ du lien de la troisième vidéo déjà présente dans la mosaique. 
+( voir les liens ci-dessous ) 
+---------------
+Vignette en HP :  ( La vidéo que wsb va héberger sur VIMEO - je vous donne le lien ASAP ) 
+
+Mosaique : 
+
+|PIC|_VIDEO_|
+|PIC|PIC|PIC|
+|_VIDEO_|PIC|
+|PIC|PIC|PIC|
+-------------
+|_VIDEO_|PIC|
+
+Ligne 1 :  http://player.vimeo.com/video/116657329
+
+Ligne 2 ; des photos 
+
+Ligne 3 : http://player.vimeo.com/video/118824772?title=0&byline=0&portrait=0
+
+Ligne 4 - Des photos. 
+
+Ligne 5 : on remplace la vidéo existante par la vidéo http://player.vimeo.com/video/118712582?title=0&byline=0&portrait=0
+
